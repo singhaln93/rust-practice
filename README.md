@@ -27,6 +27,13 @@ rustc --version             # Get rust compiler version
 rustup update               # Update rust compiler
 cargo --version             # Get cargo package manager version
 cargo init <project_name>   # Init sample project
-cargo build --release       # Build release (opimized)
+cargo build --release       # Build release (optimized)
 cargo run                   # Execute rust application or program
+```
+
+### Rust Code Formatting
+You can use `format document` of vscode or `rustfmt`
+```bash
+rustup component add rustfmt #add rustfmt component
+cargo fmt                    #cargo format the project
 ```
