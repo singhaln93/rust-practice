@@ -3,10 +3,14 @@
  * Copyright © 2021  Neeraj Singhal
  * All rights reserved
  */
+//Import external crates
 extern crate rand;
 
 use rand::Rng;
 use std::io;
+
+// Import user-defined modules
+mod file;
 mod math;
 mod temp;
 
@@ -15,7 +19,7 @@ fn main() {
     let x: i8 = -9;
     println!("Result= {}", x);
 
-    let secret_number = rand::thread_rng().gen_range(1, 100);
+    let secret_number = rand::thread_rng().gen_range(1..101);
     println!("The secret number= {}", secret_number);
 
     let mut a = String::new();
@@ -43,4 +47,12 @@ fn main() {
     let celsius_temp = temp::fahrenheit_to_celsius(fahrenheit_temp);
     assert_eq!(celsius_temp, 23.0);
     println!("Test# {} Passed!", std::stringify!(fahrenheit_to_celsius));
+
+    #[cfg(test)]
+    mod tests {
+        #[test]
+        fn it_works() {
+            assert_eq!(2 + 2, 5);
+        }
+    }
 }

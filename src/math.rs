@@ -1,4 +1,10 @@
 /**
+ * @file math.rs
+ * Copyright © 2021  Neeraj Singhal
+ * All rights reserved
+ */
+
+/**
  * Function used to add two numbers
  */
 pub fn add(a: i32, b: i32) -> i32 {

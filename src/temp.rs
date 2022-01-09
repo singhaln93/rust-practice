@@ -1,4 +1,10 @@
 /**
+ * @file temp.rs
+ * Copyright © 2021  Neeraj Singhal
+ * All rights reserved
+ */
+
+/**
  * Function used to convert temperature from celsius to fahrenheit
  */
 pub fn celsius_to_fahrenheit(temp: f64) -> f64 {
