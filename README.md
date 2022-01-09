@@ -10,7 +10,7 @@ References:
   <summary>Windows</summary>
 
   ### Installation
-Install `rustup`
+Download and install `rustup_init.exe`
 </details>
 
 <details>
@@ -28,8 +28,10 @@ rustc --version             # Get rust compiler version
 rustup update               # Update rust compiler
 cargo --version             # Get cargo package manager version
 cargo init <project_name>   # Init sample project
+cargo new <project_name>    # New cargo Project
 cargo build --release       # Build release (optimized)
 cargo run                   # Execute rust application or program
+cargo show                  # List all cargo 
 ```
 
 ### Rust Code Formatting
@@ -54,6 +56,7 @@ Use short lowercase names at least for the top-level files and folders except `L
 ```bash
 tree -L 1
 ```
+For more examples, please refer to the [Doxygen documentation](https://neeraj2k18.github.io/rust-practice/docs/doxygen-html/doc/rust-practice/index.html) and for [Code coverage](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html) 
 
 <!-- LICENSE -->
 ### License
