@@ -31,7 +31,8 @@ cargo init <project_name>   # Init sample project
 cargo new <project_name>    # New cargo Project
 cargo build --release       # Build release (optimized)
 cargo run                   # Execute rust application or program
-cargo show                  # List all cargo 
+cargo test                  # For unit testing
+cargo doc --target-dir=docs/doxygen-html
 ```
 
 ### Rust Code Formatting
@@ -56,7 +57,7 @@ Use short lowercase names at least for the top-level files and folders except `L
 ```bash
 tree -L 1
 ```
-For more examples, please refer to the [Doxygen documentation](https://neeraj2k18.github.io/rust-practice/docs/doxygen-html/doc/rust-practice/index.html) and for [Code coverage](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html) 
+For more examples, please refer to the [Doxygen documentation](https://neeraj2k18.github.io/rust-practice/docs/doxygen-html/doc/rust_practice/index.html) and for [Code coverage](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html) 
 
 <!-- LICENSE -->
 ### License
