@@ -5,12 +5,18 @@ Rust Programming Tutorials [rust-lang official website](https://www.rust-lang.or
 References:
   1. [Rust Language documentation](http://rust-lang.github.io/rustup/index.html)
   2. [Rust Language cheat sheet](https://cheats.rs/)
+  3. [The Cargo Book](https://doc.rust-lang.org/cargo/)
 
 <details>
   <summary>Windows</summary>
 
   ### Installation
-Download and install `rustup_init.exe`
+Download and install `rustup_init.exe` [Installer](https://win.rustup.rs/x86_64) <br>
+Pre-requisite [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/?q=build+tools)
+
+VS Code Extn: <br>
+[Rust](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) <br>
+[rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
 </details>
 
 <details>
@@ -23,6 +29,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </details>
 
 ### Rust/Cargo commands
+Cargo is rust package manager, which is used to build, run, test, document and install rust applications.
 ```bash
 rustc --version             # Get rust compiler version
 rustup update               # Update rust compiler
@@ -34,7 +41,7 @@ cargo run                   # Execute rust application or program
 cargo test                  # For unit testing
 cargo doc --target-dir=docs/doxygen-html
 ```
-
+For more information on cargo refer [the cargo book](https://doc.rust-lang.org/cargo/)
 ### Rust Code Formatting
 You can use `format document` of vscode or `rustfmt`
 ```bash
