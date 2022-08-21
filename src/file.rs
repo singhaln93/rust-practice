@@ -3,19 +3,14 @@
  * Copyright © 2021  Neeraj Singhal
  * All rights reserved
  */
-use std::{
-    error,
-    fs::{read_to_string, write},
-    path::Path,
-    result,
-};
+use std::{error, result};
 
 type TResult<T> = result::Result<T, TError>;
 type TError = Box<dyn error::Error>;
 /**
  * Read in the file as String
  */
-pub fn read_file(p: &str) -> TResult<String> {
+pub fn read_file(_p: &str) -> TResult<String> {
     unimplemented!();
 }
 

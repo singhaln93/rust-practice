@@ -5,7 +5,7 @@
 [![pages-build-deployment](https://github.com/Neeraj2K18/rust-practice/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/Neeraj2K18/rust-practice/actions/workflows/pages/pages-build-deployment)
 
 [![cargo-docs](https://img.shields.io/badge/cargo--docs-deployed-yellow.svg?branch=main)](https://neeraj2k18.github.io/rust-practice/docs/doxygen-html/doc/rust_practice/index.html)
-[![code-coverage](https://img.shields.io/badge/code--coverage-deployed-lightgrey.svg?branch=main)](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html)
+[![code-coverage](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/badges/plastic.svg?branch=main)](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html)
 ---
 # rust-practice
 
@@ -50,12 +50,15 @@ cargo run                   # Execute rust application or program
 cargo test                  # For unit testing
 cargo doc --target-dir=docs/doxygen-html
 ```
-For more information on cargo refer [the cargo book](https://doc.rust-lang.org/cargo/)
+For more information on cargo refer [the cargo book](https://doc.rust-lang.org/cargo/) and [crates.io](https://crates.io/)
 ### Rust Code Formatting
 You can use `format document` of vscode or `rustfmt`
 ```bash
-rustup component add rustfmt #add rustfmt component
-cargo fmt                    #cargo format the project
+# add rust components
+rustup component add rustfmt rls rust-analysis rust-src cippy llvm-tools-preview
+cargo install grcov                                           # grcov code coverage
+cargo fix                                                     # cargo fix the project
+cargo fmt                                                     # cargo format the project
 ```
 
 ### Folder structure

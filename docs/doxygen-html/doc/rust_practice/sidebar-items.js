@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["main",""]],"mod":[["math",""],["temp",""]]});
+window.SIDEBAR_ITEMS = {"fn":[["main",""]],"mod":[["file",""],["math",""],["temp",""]]};

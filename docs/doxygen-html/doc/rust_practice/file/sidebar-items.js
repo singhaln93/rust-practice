@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["read_file","Read in the file as String"]],"type":[["TError",""],["TResult",""]]};

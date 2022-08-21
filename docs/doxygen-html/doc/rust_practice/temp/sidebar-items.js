@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["celsius_to_fahrenheit","Function used to convert temperature from celsius to fahrenheit"],["fahrenheit_to_celsius","Function used to convert temperature from fahrenheit to celsius"]]});
+window.SIDEBAR_ITEMS = {"fn":[["celsius_to_fahrenheit","@file temp.rs Copyright © 2021  Neeraj Singhal All rights reserved Function used to convert temperature from celsius to fahrenheit"],["fahrenheit_to_celsius","Function used to convert temperature from fahrenheit to celsius"]]};
