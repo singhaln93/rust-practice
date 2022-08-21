@@ -39,13 +39,32 @@ pub fn average(a: i32, b: f64, c: f64) -> f64 {
     return (a as f64 + b + c) / 3.0;
 }
 
-/**
- * Function used to calculate square root of the number
- */
-pub fn sqrt(number: f64) -> Result<f64, String> {
-    if number >= 0.0 {
-        Ok(number.powf(0.5))
-    } else {
-        Err("negative floats don't have square roots".to_owned())
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn ut_add() {
+        assert_eq!(4, add(2, 2));
+    }
+
+    #[test]
+    fn ut_sub() {
+        assert_eq!(0, sub(2, 2));
+    }
+
+    #[test]
+    fn ut_mul() {
+        assert_eq!(4, mul(2, 2));
+    }
+
+    #[test]
+    fn ut_div() {
+        assert_eq!(1, div(2, 2));
+    }
+
+    #[test]
+    fn ut_average() {
+        assert_eq!(2.0, average(2, 2.0, 2.0));
     }
 }
