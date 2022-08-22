@@ -8,8 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ---
+## v0.0.1 - Aug. 22,2021
+### Changed
+- Updated Project
+- Updated unit test
+
 ## v0.0.0 - Dec. 19,2021
-**Added**
+### Added
 - Updated rust project
 - Create rust.yml
 - Updated rust files and docs

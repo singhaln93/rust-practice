@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["main",""]],"mod":[["file",""],["math",""],["temp",""]]};
+window.SIDEBAR_ITEMS = {"fn":[["main","main function"]],"mod":[["file",""],["math",""],["temp",""]]};

@@ -1,11 +1,9 @@
-/**
- * @file main.rs
- * Copyright © 2021  Neeraj Singhal
- * All rights reserved
- */
-//Import external crates
-extern crate rand;
+// file main.rs
+// MIT License
+// Copyright (c) 2021 Neeraj Singhal
 
+// Import external crates
+extern crate rand;
 use rand::Rng;
 use std::io;
 
@@ -14,6 +12,7 @@ mod file;
 mod math;
 mod temp;
 
+/// main function
 fn main() {
     println!("Hello World!\nI'm a Rustacean!\n");
     let x: i8 = -9;
@@ -47,12 +46,4 @@ fn main() {
     let celsius_temp = temp::fahrenheit_to_celsius(fahrenheit_temp);
     assert_eq!(celsius_temp, 23.0);
     println!("Test# {} Passed!", std::stringify!(fahrenheit_to_celsius));
-
-    #[cfg(test)]
-    mod tests {
-        #[test]
-        fn it_works() {
-            assert_eq!(2 + 2, 5);
-        }
-    }
 }

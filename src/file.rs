@@ -1,15 +1,13 @@
-/**
- * @file file.rs
- * Copyright © 2021  Neeraj Singhal
- * All rights reserved
- */
+// file file.rs
+// MIT License
+// Copyright (c) 2021 Neeraj Singhal
+
 use std::{error, result};
 
 type TResult<T> = result::Result<T, TError>;
 type TError = Box<dyn error::Error>;
-/**
- * Read in the file as String
- */
+
+/// Read in the file as String
 pub fn read_file(_p: &str) -> TResult<String> {
     unimplemented!();
 }

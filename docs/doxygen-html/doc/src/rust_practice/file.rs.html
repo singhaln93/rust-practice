@@ -21,20 +21,16 @@
 <span id="15">15</span>
 <span id="16">16</span>
 <span id="17">17</span>
-<span id="18">18</span>
-<span id="19">19</span>
-</pre><pre class="rust"><code><span class="doccomment">/**
- * @file file.rs
- * Copyright © 2021  Neeraj Singhal
- * All rights reserved
- */</span>
+</pre><pre class="rust"><code><span class="comment">// file file.rs</span>
+<span class="comment">// MIT License</span>
+<span class="comment">// Copyright (c) 2021 Neeraj Singhal</span>
+
 <span class="kw">use</span> <span class="ident">std</span>::{<span class="ident">error</span>, <span class="ident">result</span>};
 
 <span class="kw">type</span> <span class="ident">TResult</span><span class="op">&lt;</span><span class="ident">T</span><span class="op">&gt;</span> <span class="op">=</span> <span class="ident">result::Result</span><span class="op">&lt;</span><span class="ident">T</span>, <span class="ident">TError</span><span class="op">&gt;</span>;
 <span class="kw">type</span> <span class="ident">TError</span> <span class="op">=</span> <span class="ident">Box</span><span class="op">&lt;</span><span class="kw">dyn</span> <span class="ident">error::Error</span><span class="op">&gt;</span>;
-<span class="doccomment">/**
- * Read in the file as String
- */</span>
+
+<span class="doccomment">/// Read in the file as String</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">read_file</span>(<span class="ident">_p</span>: <span class="kw-2">&amp;</span><span class="ident">str</span>) -&gt; <span class="ident">TResult</span><span class="op">&lt;</span><span class="ident">String</span><span class="op">&gt;</span> {
     <span class="macro">unimplemented!</span>();
 }

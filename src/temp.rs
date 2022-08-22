@@ -1,25 +1,34 @@
-/**
- * @file temp.rs
- * Copyright © 2021  Neeraj Singhal
- * All rights reserved
- */
+// file temp.rs
+// MIT License
+// Copyright (c) 2021 Neeraj Singhal
 
-/**
- * Function used to convert temperature from celsius to fahrenheit
- */
+/// Function used to convert temperature from celsius to fahrenheit
+///
+/// ## Example:
+/// ```rust
+/// let celsius = 0;
+/// let result = celsius_to_fahrenheit(celsius);
+/// assert_eq!(32, result);
+/// ```
 pub fn celsius_to_fahrenheit(temp: f64) -> f64 {
-    return (temp * 1.8) + 32.0;
+    (temp * 1.8) + 32.0
 }
 
-/**
- * Function used to convert temperature from fahrenheit to celsius
- */
+/// Function used to convert temperature from fahrenheit to celsius
+///
+/// ## Example:
+/// ```rust
+/// let fahrenheit = 32;
+/// let result = fahrenheit_to_celsius(fahrenheit);
+/// assert_eq!(0, result);
+/// ```
 pub fn fahrenheit_to_celsius(temp: f64) -> f64 {
-    return (temp - 32.0) * (5.0 / 9.0);
+    (temp - 32.0) * (5.0 / 9.0)
 }
 
 #[cfg(test)]
 mod tests {
+    //! This module contains unit tests for above functions
     use super::*;
     use crate::rand::thread_rng;
     use crate::rand::Rng;
