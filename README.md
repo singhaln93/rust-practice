@@ -12,9 +12,10 @@
 Rust Programming Tutorials [rust-lang official website](https://www.rust-lang.org/)
 
 References:
-  1. [Rust Language documentation](http://rust-lang.github.io/rustup/index.html)
-  2. [Rust Language cheat sheet](https://cheats.rs/)
-  3. [The Cargo Book](https://doc.rust-lang.org/cargo/)
+  1. [Rust Starter Pack](https://opheron.github.io/rust-starter-pack/)
+  2. [Rust Language documentation](http://rust-lang.github.io/rustup/index.html)
+  3. [Rust Language cheat sheet](https://cheats.rs/)
+  4. [The Cargo Book](https://doc.rust-lang.org/cargo/)
 
 <details>
   <summary>Windows</summary>
