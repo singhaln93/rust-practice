@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["celsius_to_fahrenheit","Function used to convert temperature from celsius to fahrenheit"],["fahrenheit_to_celsius","Function used to convert temperature from fahrenheit to celsius"]]};
+window.SIDEBAR_ITEMS = {"fn":["celsius_to_fahrenheit","fahrenheit_to_celsius"]};

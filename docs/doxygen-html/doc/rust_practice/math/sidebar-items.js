@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":[["add","Function used to add two numbers"],["average","Function used to calculate average of three numbers"],["div","Function used to divide two numbers"],["mul","Function used to multiply two numbers"],["sub","Function used to subtract two numbers"]]};
+window.SIDEBAR_ITEMS = {"fn":["add","average","div","mul","sub"]};

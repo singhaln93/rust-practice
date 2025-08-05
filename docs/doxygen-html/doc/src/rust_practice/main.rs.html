@@ -1,107 +1,47 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src/main.rs`."><meta name="keywords" content="rust, rustlang, rust-lang"><title>main.rs - source</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../ayu.css" disabled><link rel="stylesheet" type="text/css" href="../../dark.css" disabled><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../../storage.js"></script><script defer src="../../source-script.js"></script><script defer src="../../source-files.js"></script><script defer src="../../main.js"></script><noscript><link rel="stylesheet" href="../../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../../favicon.svg"></head><body class="rustdoc source"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../../rust_practice/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
-        </a><h2 class="location"></h2>
-    </nav>
-    <nav class="sidebar"><a class="sidebar-logo" href="../../rust_practice/index.html"><div class="logo-container"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></div>
-        </a></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../../rust_practice/index.html"><img class="rust-logo" src="../../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><button type="button" id="help-button" title="help">?</button><div id="settings-menu" tabindex="-1">
-                                <a href="../../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../../wheel.svg"></a></div>
-                        </div></form></nav></div><section id="main-content" class="content"><div class="example-wrap"><pre class="line-numbers"><span id="1">1</span>
-<span id="2">2</span>
-<span id="3">3</span>
-<span id="4">4</span>
-<span id="5">5</span>
-<span id="6">6</span>
-<span id="7">7</span>
-<span id="8">8</span>
-<span id="9">9</span>
-<span id="10">10</span>
-<span id="11">11</span>
-<span id="12">12</span>
-<span id="13">13</span>
-<span id="14">14</span>
-<span id="15">15</span>
-<span id="16">16</span>
-<span id="17">17</span>
-<span id="18">18</span>
-<span id="19">19</span>
-<span id="20">20</span>
-<span id="21">21</span>
-<span id="22">22</span>
-<span id="23">23</span>
-<span id="24">24</span>
-<span id="25">25</span>
-<span id="26">26</span>
-<span id="27">27</span>
-<span id="28">28</span>
-<span id="29">29</span>
-<span id="30">30</span>
-<span id="31">31</span>
-<span id="32">32</span>
-<span id="33">33</span>
-<span id="34">34</span>
-<span id="35">35</span>
-<span id="36">36</span>
-<span id="37">37</span>
-<span id="38">38</span>
-<span id="39">39</span>
-<span id="40">40</span>
-<span id="41">41</span>
-<span id="42">42</span>
-<span id="43">43</span>
-<span id="44">44</span>
-<span id="45">45</span>
-<span id="46">46</span>
-<span id="47">47</span>
-<span id="48">48</span>
-<span id="49">49</span>
-</pre><pre class="rust"><code><span class="comment">// file main.rs</span>
-<span class="comment">// MIT License</span>
-<span class="comment">// Copyright (c) 2021 Neeraj Singhal</span>
-
-<span class="comment">// Import external crates</span>
-<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">rand</span>;
-<span class="kw">use</span> <span class="ident">rand::Rng</span>;
-<span class="kw">use</span> <span class="ident">std::io</span>;
-
-<span class="comment">// Import user-defined modules</span>
-<span class="kw">mod</span> <span class="ident">file</span>;
-<span class="kw">mod</span> <span class="ident">math</span>;
-<span class="kw">mod</span> <span class="ident">temp</span>;
-
-<span class="doccomment">/// main function</span>
-<span class="kw">fn</span> <span class="ident">main</span>() {
-    <span class="macro">println!</span>(<span class="string">&quot;Hello World!\nI&#39;m a Rustacean!\n&quot;</span>);
-    <span class="kw">let</span> <span class="ident">x</span>: <span class="ident">i8</span> <span class="op">=</span> <span class="op">-</span><span class="number">9</span>;
-    <span class="macro">println!</span>(<span class="string">&quot;Result= {}&quot;</span>, <span class="ident">x</span>);
-
-    <span class="kw">let</span> <span class="ident">secret_number</span> <span class="op">=</span> <span class="ident">rand::thread_rng</span>().<span class="ident">gen_range</span>(<span class="number">1</span>..<span class="number">101</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;The secret number= {}&quot;</span>, <span class="ident">secret_number</span>);
-
-    <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">a</span> <span class="op">=</span> <span class="ident">String::new</span>();
-    <span class="ident">io::stdin</span>().<span class="ident">read_line</span>(<span class="kw-2">&amp;mut</span> <span class="ident">a</span>).<span class="ident">expect</span>(<span class="string">&quot;failed to read line&quot;</span>);
-
-    <span class="kw">let</span> <span class="ident">a</span> <span class="op">=</span> <span class="number">2</span>;
-    <span class="kw">let</span> <span class="ident">b</span> <span class="op">=</span> <span class="number">9</span>;
-    <span class="kw">let</span> <span class="ident">sum</span> <span class="op">=</span> <span class="ident">math::add</span>(<span class="ident">a</span>, <span class="ident">b</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Result {} + {} = {}&quot;</span>, <span class="ident">a</span>, <span class="ident">b</span>, <span class="ident">sum</span>);
-    <span class="kw">let</span> <span class="ident">sub</span> <span class="op">=</span> <span class="ident">math::sub</span>(<span class="ident">a</span>, <span class="ident">b</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Result {} - {} = {}&quot;</span>, <span class="ident">a</span>, <span class="ident">b</span>, <span class="ident">sub</span>);
-    <span class="kw">let</span> <span class="ident">mul</span> <span class="op">=</span> <span class="ident">math::mul</span>(<span class="ident">a</span>, <span class="ident">b</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Result {} * {} = {}&quot;</span>, <span class="ident">a</span>, <span class="ident">b</span>, <span class="ident">mul</span>);
-
-    <span class="kw">let</span> <span class="ident">average</span> <span class="op">=</span> <span class="ident">math::average</span>(<span class="number">13</span>, <span class="number">2.3</span>, <span class="number">120.0</span>);
-    <span class="macro">assert_eq!</span>(<span class="ident">average</span>, <span class="number">45.1</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Test# {} Passed!&quot;</span>, <span class="macro">std::stringify!</span>(<span class="ident">average</span>));
-
-    <span class="kw">let</span> <span class="ident">celsius_temp</span> <span class="op">=</span> <span class="number">23.0</span>;
-    <span class="kw">let</span> <span class="ident">fahrenheit_temp</span> <span class="op">=</span> <span class="ident">temp::celsius_to_fahrenheit</span>(<span class="ident">celsius_temp</span>);
-    <span class="macro">assert_eq!</span>(<span class="ident">fahrenheit_temp</span>, <span class="number">73.4</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Test# {} Passed!&quot;</span>, <span class="macro">std::stringify!</span>(<span class="ident">celsius_to_fahrenheit</span>));
-
-    <span class="kw">let</span> <span class="ident">fahrenheit_temp</span> <span class="op">=</span> <span class="number">73.4</span>;
-    <span class="kw">let</span> <span class="ident">celsius_temp</span> <span class="op">=</span> <span class="ident">temp::fahrenheit_to_celsius</span>(<span class="ident">fahrenheit_temp</span>);
-    <span class="macro">assert_eq!</span>(<span class="ident">celsius_temp</span>, <span class="number">23.0</span>);
-    <span class="macro">println!</span>(<span class="string">&quot;Test# {} Passed!&quot;</span>, <span class="macro">std::stringify!</span>(<span class="ident">fahrenheit_to_celsius</span>));
-}
-</code></pre></div>
-</section></div></main><div id="rustdoc-vars" data-root-path="../../" data-current-crate="rust_practice" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.63.0 (4b91a6ea7 2022-08-08)" ></div>
-</body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `src\main.rs`."><title>main.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-1a91846b.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="rust_practice" data-themes="" data-resource-suffix="" data-rustdoc-version="1.88.0 (6b00bc388 2025-06-23)" data-channel="1.88.0" data-search-js="search-f7877310.js" data-settings-js="settings-5514c975.js" ><script src="../../static.files/storage-4e99c027.js"></script><script defer src="../../static.files/src-script-63605ae7.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-7ef8a74a.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="src-sidebar-title"><h2>Files</h2></div></nav><div class="sidebar-resizer"></div><main><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1><div class="sub-heading">rust_practice/</div>main.rs</h1><rustdoc-toolbar></rustdoc-toolbar></div><div class="example-wrap digits-2"><pre class="rust"><code><a href=#1 id=1 data-nosnippet>1</a><span class="comment">// file main.rs
+<a href=#2 id=2 data-nosnippet>2</a>// MIT License
+<a href=#3 id=3 data-nosnippet>3</a>// Copyright (c) 2025 Neeraj Singhal
+<a href=#4 id=4 data-nosnippet>4</a>
+<a href=#5 id=5 data-nosnippet>5</a>// Import external crates
+<a href=#6 id=6 data-nosnippet>6</a></span><span class="kw">extern crate </span>rand;
+<a href=#7 id=7 data-nosnippet>7</a><span class="kw">use </span>rand::Rng;
+<a href=#8 id=8 data-nosnippet>8</a>
+<a href=#9 id=9 data-nosnippet>9</a><span class="comment">// Import user-defined modules
+<a href=#10 id=10 data-nosnippet>10</a></span><span class="kw">mod </span>file;
+<a href=#11 id=11 data-nosnippet>11</a><span class="kw">mod </span>math;
+<a href=#12 id=12 data-nosnippet>12</a><span class="kw">mod </span>temp;
+<a href=#13 id=13 data-nosnippet>13</a>
+<a href=#14 id=14 data-nosnippet>14</a><span class="doccomment">/// main function
+<a href=#15 id=15 data-nosnippet>15</a></span><span class="kw">fn </span>main() {
+<a href=#16 id=16 data-nosnippet>16</a>
+<a href=#17 id=17 data-nosnippet>17</a>    <span class="macro">println!</span>(<span class="string">"\nHello World!\nI'm a Rustacean!\n"</span>);
+<a href=#18 id=18 data-nosnippet>18</a>
+<a href=#19 id=19 data-nosnippet>19</a>    <span class="kw">let </span>secret_number = rand::rng().random_range(<span class="number">1</span>..<span class="number">101</span>);
+<a href=#20 id=20 data-nosnippet>20</a>    <span class="macro">println!</span>(<span class="string">"The secret number = {secret_number}"</span>);
+<a href=#21 id=21 data-nosnippet>21</a>
+<a href=#22 id=22 data-nosnippet>22</a>    <span class="kw">let </span>a = <span class="number">2</span>;
+<a href=#23 id=23 data-nosnippet>23</a>    <span class="kw">let </span>b = <span class="number">9</span>;
+<a href=#24 id=24 data-nosnippet>24</a>    <span class="kw">let </span>sum = math::add(a, b);
+<a href=#25 id=25 data-nosnippet>25</a>    <span class="macro">println!</span>(<span class="string">"Result {a} + {b} = {sum}"</span>);
+<a href=#26 id=26 data-nosnippet>26</a>    <span class="kw">let </span>sub = math::sub(a, b);
+<a href=#27 id=27 data-nosnippet>27</a>    <span class="macro">println!</span>(<span class="string">"Result {a} - {b} = {sub}"</span>);
+<a href=#28 id=28 data-nosnippet>28</a>    <span class="kw">let </span>mul = math::mul(a, b);
+<a href=#29 id=29 data-nosnippet>29</a>    <span class="macro">println!</span>(<span class="string">"Result {a} * {b} = {mul}"</span>);
+<a href=#30 id=30 data-nosnippet>30</a>    <span class="kw">let </span>div = math::div(<span class="number">2.0</span>, <span class="number">3.0</span>);
+<a href=#31 id=31 data-nosnippet>31</a>    <span class="macro">println!</span>(<span class="string">"Result 2.0 / 3.0 = {div}"</span>);
+<a href=#32 id=32 data-nosnippet>32</a>
+<a href=#33 id=33 data-nosnippet>33</a>    <span class="kw">let </span>average = math::average(<span class="number">13</span>, <span class="number">2.3</span>, <span class="number">120.0</span>);
+<a href=#34 id=34 data-nosnippet>34</a>    <span class="macro">assert!</span>((average - <span class="number">45.1</span>).abs() &lt; f64::EPSILON);
+<a href=#35 id=35 data-nosnippet>35</a>    <span class="macro">println!</span>(<span class="string">"Test passed: Average of 13, 2.3 and 120 = {average}"</span>);
+<a href=#36 id=36 data-nosnippet>36</a>
+<a href=#37 id=37 data-nosnippet>37</a>    <span class="kw">let </span>celsius_temp = <span class="number">23.0</span>;
+<a href=#38 id=38 data-nosnippet>38</a>    <span class="kw">let </span>fahrenheit_temp = temp::celsius_to_fahrenheit(celsius_temp);
+<a href=#39 id=39 data-nosnippet>39</a>    <span class="macro">assert!</span>((fahrenheit_temp - <span class="number">73.4</span>).abs() &lt; f64::EPSILON);
+<a href=#40 id=40 data-nosnippet>40</a>    <span class="macro">println!</span>(<span class="string">"Test passed: celsius_to_fahrenheit({celsius_temp}) = {fahrenheit_temp}"</span>);
+<a href=#41 id=41 data-nosnippet>41</a>
+<a href=#42 id=42 data-nosnippet>42</a>    <span class="kw">let </span>fahrenheit_temp = <span class="number">73.4</span>;
+<a href=#43 id=43 data-nosnippet>43</a>    <span class="kw">let </span>celsius_temp = temp::fahrenheit_to_celsius(fahrenheit_temp);
+<a href=#44 id=44 data-nosnippet>44</a>    <span class="macro">assert!</span>((celsius_temp - <span class="number">23.0</span>).abs() &lt; <span class="number">1e-6</span>);
+<a href=#45 id=45 data-nosnippet>45</a>    <span class="macro">println!</span>(<span class="string">"Test passed: fahrenheit_to_celsius({fahrenheit_temp}) = {celsius_temp}"</span>);
+<a href=#46 id=46 data-nosnippet>46</a>
+<a href=#47 id=47 data-nosnippet>47</a>}</code></pre></div></section></main></body></html>

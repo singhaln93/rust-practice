@@ -1,11 +1,10 @@
 // file main.rs
 // MIT License
-// Copyright (c) 2021 Neeraj Singhal
+// Copyright (c) 2025 Neeraj Singhal
 
 // Import external crates
 extern crate rand;
 use rand::Rng;
-use std::io;
 
 // Import user-defined modules
 mod file;
@@ -14,36 +13,35 @@ mod temp;
 
 /// main function
 fn main() {
-    println!("Hello World!\nI'm a Rustacean!\n");
-    let x: i8 = -9;
-    println!("Result= {}", x);
 
-    let secret_number = rand::thread_rng().gen_range(1..101);
-    println!("The secret number= {}", secret_number);
+    println!("\nHello World!\nI'm a Rustacean!\n");
 
-    let mut a = String::new();
-    io::stdin().read_line(&mut a).expect("failed to read line");
+    let secret_number = rand::rng().random_range(1..101);
+    println!("The secret number = {secret_number}");
 
     let a = 2;
     let b = 9;
     let sum = math::add(a, b);
-    println!("Result {} + {} = {}", a, b, sum);
+    println!("Result {a} + {b} = {sum}");
     let sub = math::sub(a, b);
-    println!("Result {} - {} = {}", a, b, sub);
+    println!("Result {a} - {b} = {sub}");
     let mul = math::mul(a, b);
-    println!("Result {} * {} = {}", a, b, mul);
+    println!("Result {a} * {b} = {mul}");
+    let div = math::div(2.0, 3.0);
+    println!("Result 2.0 / 3.0 = {div}");
 
     let average = math::average(13, 2.3, 120.0);
-    assert_eq!(average, 45.1);
-    println!("Test# {} Passed!", std::stringify!(average));
+    assert!((average - 45.1).abs() < f64::EPSILON);
+    println!("Test passed: Average of 13, 2.3 and 120 = {average}");
 
     let celsius_temp = 23.0;
     let fahrenheit_temp = temp::celsius_to_fahrenheit(celsius_temp);
-    assert_eq!(fahrenheit_temp, 73.4);
-    println!("Test# {} Passed!", std::stringify!(celsius_to_fahrenheit));
+    assert!((fahrenheit_temp - 73.4).abs() < f64::EPSILON);
+    println!("Test passed: celsius_to_fahrenheit({celsius_temp}) = {fahrenheit_temp}");
 
     let fahrenheit_temp = 73.4;
     let celsius_temp = temp::fahrenheit_to_celsius(fahrenheit_temp);
-    assert_eq!(celsius_temp, 23.0);
-    println!("Test# {} Passed!", std::stringify!(fahrenheit_to_celsius));
+    assert!((celsius_temp - 23.0).abs() < 1e-6);
+    println!("Test passed: fahrenheit_to_celsius({fahrenheit_temp}) = {celsius_temp}");
+
 }

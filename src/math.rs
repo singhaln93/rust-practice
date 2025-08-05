@@ -1,6 +1,6 @@
 // file math.rs
 // MIT License
-// Copyright (c) 2021 Neeraj Singhal
+// Copyright (c) 2025 Neeraj Singhal
 
 /// Function used to add two numbers
 ///

@@ -3,7 +3,7 @@
     <head><meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Grcov report - src </title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"></head>
+        <link rel="stylesheet" href="../bulma.min.css"></head>
     <body>
         <div class="container">
     <nav class="breadcrumb is-right" aria-label="breadcrumbs">
@@ -14,8 +14,8 @@
         <div class="level-item has-text-centered">
         <div>
             <p class="heading">Lines</p>
-            <p class="title has-text-warning">
-                <abbr title="50 / 58">86.21 %</abbr></p>
+            <p class="title has-text-success">
+                <abbr title="47 / 49">95.92 %</abbr></p>
         </div>
     </div>
 
@@ -23,11 +23,12 @@
         <div>
             <p class="heading">Functions</p>
             <p class="title has-text-warning">
-                <abbr title="7 / 9">77.78 %</abbr></p>
+                <abbr title="8 / 9">88.89 %</abbr></p>
         </div>
     </div>
 
-        <div class="level-item has-text-centered">
+        
+	    <div class="level-item has-text-centered">
         <div>
             <p class="heading">Branches</p>
             <p class="title has-text-success">
@@ -35,6 +36,7 @@
         </div>
     </div>
 
+	
     </nav>
 
     <table class="table is-fullwidth">
@@ -43,10 +45,14 @@
                 <th>File</th>
                 <th class="has-text-centered" colspan="3">Line Coverage</th>
                 <th class="has-text-centered" colspan="2">Functions</th>
-                <th class="has-text-centered" colspan="2">Branches</th>
+                
+                    <th class="has-text-centered" colspan="2">Branches</th>
+                
             </tr>
         </thead>
-        <tbody><tr>
+        <tbody>
+                    
+    <tr>
         <th><a href="file.rs.html">file.rs</a></th>
         <!-- -->
         <td class="p-2">
@@ -61,64 +67,79 @@
             0%
         </td>
         <td class="has-text-centered has-background-danger p-2">
-            0 / 3
+            0 / 2
         </td>
         <!-- -->
         <td class="has-text-centered has-background-danger p-2">0%</td>
         <td class="has-text-centered has-background-danger p-2">0 / 1 </td>
         <!-- -->
-        <td class="has-text-centered has-background-success p-2">100%</td>
-        <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
+            <td class="has-text-centered has-background-success p-2">100%</td>
+            <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
     </tr>
-<tr>
+
+                  
+                    
+    <tr>
         <th><a href="main.rs.html">main.rs</a></th>
         <!-- -->
         <td class="p-2">
             <progress
                 class="progress is-success is-large"
-                value="94.11764705882352"
+                value="100"
                 max="100">
-                94.12%
+                100%
             </progress>
         </td>
         <td class="has-text-centered has-background-success p-2">
-            94.12%
+            100%
         </td>
         <td class="has-text-centered has-background-success p-2">
-            32 / 34
+            26 / 26
         </td>
         <!-- -->
         <td class="has-text-centered has-background-success p-2">100%</td>
         <td class="has-text-centered has-background-success p-2">1 / 1 </td>
         <!-- -->
-        <td class="has-text-centered has-background-success p-2">100%</td>
-        <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
+            <td class="has-text-centered has-background-success p-2">100%</td>
+            <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
     </tr>
-<tr>
+
+                  
+                    
+    <tr>
         <th><a href="math.rs.html">math.rs</a></th>
         <!-- -->
         <td class="p-2">
             <progress
-                class="progress is-warning is-large"
-                value="80"
+                class="progress is-success is-large"
+                value="100"
                 max="100">
-                80%
+                100%
             </progress>
         </td>
-        <td class="has-text-centered has-background-warning p-2">
-            80%
+        <td class="has-text-centered has-background-success p-2">
+            100%
         </td>
-        <td class="has-text-centered has-background-warning p-2">
-            12 / 15
+        <td class="has-text-centered has-background-success p-2">
+            15 / 15
         </td>
-        <!-- -->
-        <td class="has-text-centered has-background-warning p-2">80%</td>
-        <td class="has-text-centered has-background-warning p-2">4 / 5 </td>
         <!-- -->
         <td class="has-text-centered has-background-success p-2">100%</td>
-        <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        <td class="has-text-centered has-background-success p-2">5 / 5 </td>
+        <!-- -->
+        
+            <td class="has-text-centered has-background-success p-2">100%</td>
+            <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
     </tr>
-<tr>
+
+                  
+                    
+    <tr>
         <th><a href="temp.rs.html">temp.rs</a></th>
         <!-- -->
         <td class="p-2">
@@ -139,15 +160,20 @@
         <td class="has-text-centered has-background-success p-2">100%</td>
         <td class="has-text-centered has-background-success p-2">2 / 2 </td>
         <!-- -->
-        <td class="has-text-centered has-background-success p-2">100%</td>
-        <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
+            <td class="has-text-centered has-background-success p-2">100%</td>
+            <td class="has-text-centered has-background-success p-2">0 / 0</td>
+        
     </tr>
-</tbody>
+
+                  </tbody>
     </table></div>
         <footer class="footer">
-            <div class="content has-text-centered">
-                <p class="heading">Date: 2022-08-22 20:07</p>
-            </div>
+            
+                <div class="content has-text-centered">
+                    <p class="heading">Date: 2025-08-05 21:17</p>
+                </div>
+            
         </footer>
     </body>
 </html>
