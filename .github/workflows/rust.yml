@@ -1,24 +1,46 @@
-name: Rust
+name: 🦀 Rust CI
 
 on:
+  # Scheduled build every day at midnight UTC
   schedule:
-    - cron: '00 00 * * *'
+    - cron: '0 0 * * *'
+
+  # Trigger on push and pull request to main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-
+  build-and-test:
+    name: 🧪 Build & Test
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v2
+
+      - name: 📦 Cache Cargo registry
+        uses: actions/cache@v3
+        with:
+          path: ~/.cargo/registry
+          key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-registry-
+
+      - name: 📦 Cache Cargo build
+        uses: actions/cache@v3
+        with:
+          path: target
+          key: ${{ runner.os }}-cargo-build-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-build-
+
+      - name: 🛠️ Build project
+        run: cargo build --verbose
+
+      - name: 🧪 Run tests
+        run: cargo test --verbose
