@@ -4,7 +4,7 @@
 [![Rust Build](https://github.com/Neeraj2K18/rust-practice/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/Neeraj2K18/rust-practice/actions/workflows/rust.yml)
 [![Pages Deployment](https://github.com/Neeraj2K18/rust-practice/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/Neeraj2K18/rust-practice/actions/workflows/pages/pages-build-deployment)
 [![Cargo Docs](https://img.shields.io/badge/cargo--docs-deployed-yellow.svg?branch=main)](https://neeraj2k18.github.io/rust-practice/docs/doxygen-html/doc/rust_practice/index.html)
-[![Code Coverage](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/badges/plastic.svg?branch=main)](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html)
+<!-- [![Code Coverage](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/badges/plastic.svg?branch=main)](https://neeraj2k18.github.io/rust-practice/docs/gcov-html/index.html) -->
 ---
 # rust-practice
 
